@@ -9,5 +9,5 @@ const generateToken = (id) => {
   });
 };
 
-// Exporter la fonction
+// Exportation du module
 export default generateToken;

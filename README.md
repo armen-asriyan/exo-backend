@@ -11,3 +11,9 @@
 ## Exercice 6 est fini ✅
 
 ## Exercice 7 est fini ✅
+
+## Exercice 8 est fini ✅
+
+## Exercice 9 est fini ✅
+
+## Exercice 10 est fini ✅

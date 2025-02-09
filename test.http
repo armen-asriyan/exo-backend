@@ -1,0 +1,44 @@
+// Clear cookie.json before running the tests
+
+# @name GetAllUsers
+GET http://localhost:3000/api/users
+
+
+###
+# @name CreateJaneDoe
+POST http://localhost:3000/api/users/register    
+Content-Type: application/json
+
+{
+    "name": "Jane Doe",
+    "email": "janedoe@example.com",
+    "password": "JaneDoe123"
+}
+
+
+###
+# @name LoginJaneDoe
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "janedoe@example.com",
+    "password": "JaneDoe123"
+}
+
+
+
+###
+
+# @name UpdateJaneDoe
+@janeDoeID = {{CreateJaneDoe.response.body.user._id}}
+PUT http://localhost:3000/api/users/{{janeDoeID}}
+Content-Type: application/json
+
+{
+    "name": "Jane Doe UPDATED"
+}
+
+###
+# @name DeleteJaneDoe
+DELETE http://localhost:3000/api/users/{{janeDoeID}}

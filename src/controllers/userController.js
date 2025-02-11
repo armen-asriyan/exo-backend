@@ -14,10 +14,8 @@ import { isValidObjectId } from "mongoose";
 export const getAllUsers = async (req, res, next) => {
   try {
     // Rechercher tous les utilisateurs
-    // const users = await User.find();
+    const users = await User.find({});
 
-    // Test d'erreur
-    throw new Error("Une erreur s'est produite");
     // Renvoyer les utilisateurs
     res.status(200).json(users);
   } catch (error) {

@@ -16,6 +16,7 @@ Content-Type: application/json
 }
 
 
+
 ###
 # @name LoginJaneDoe
 POST http://localhost:3000/api/users/login
@@ -26,7 +27,29 @@ Content-Type: application/json
     "password": "JaneDoe123"
 }
 
+###
+# @name CreateAdmin
+POST http://localhost:3000/api/users/register    
+Content-Type: application/json
 
+{
+    "name": "Admin",
+    "email": "admin@example.com",
+    "password": "Admin123",
+    "role": "admin"
+}
+
+
+###
+
+# @name LoginAdmin
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "admin@example.com",
+    "password": "Admin123"
+}
 
 ###
 
